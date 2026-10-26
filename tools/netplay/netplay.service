@@ -1,0 +1,16 @@
+# systemd unit for the Buu's Fury netplay relay. Install:
+#   sudo cp netplay_server.py /usr/local/bin/ && sudo cp netplay.service /etc/systemd/system/
+#   sudo systemctl enable --now netplay
+# and open TCP port 7777 in the host's firewall.
+[Unit]
+Description=Buu's Fury netplay relay
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/netplay_server.py --port 7777
+Restart=always
+RestartSec=3
+DynamicUser=yes
+
+[Install]
+WantedBy=multi-user.target
