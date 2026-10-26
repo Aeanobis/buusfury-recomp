@@ -1,0 +1,18 @@
+# everything derived from the games' ROMs stays out
+build/
+gen/
+deps/
+/lgoku1
+/lgoku2
+/buusfury
+games/*/states/
+games/*/mods/generated/
+games/*/profile/iwram.bin
+sprites/*.png
+sprites/*.txt
+sprites/palettes/
+__pycache__/
+*.state
+*.sav
+*.gba
+*.GBA
